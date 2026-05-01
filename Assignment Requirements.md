@@ -130,6 +130,15 @@ task dependencies, how to deal with circular dependencies (if any), etc..
 Parsing TaskLang++ input...
 
 --- EXECUTION START ---
+Executing Task: dailyReport
+  Script: "report.py"
+  Schedule: EVERY DAY AT 06:00
+
+--- EXECUTION COMPLETE ---
+
+Parsing TaskLang++ input...
+
+--- EXECUTION START ---
 
 Executing Task: backupDB
 Script: "backup.sh"

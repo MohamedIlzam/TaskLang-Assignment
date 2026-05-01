@@ -1855,25 +1855,25 @@ void print_execution_summary(void) {
     
     for (int i = 0; i < task_count; i++) {
         printf("Executing Task: %s\n", task_table[i].name);
-        printf("  Script: %s\n", task_table[i].command);
+        printf("Script: %s\n", task_table[i].command);
         
-        /* Schedule line */
+        /* Schedule line — show full freq + time, or just time if no freq stored */
         if (task_table[i].has_schedule) {
-            printf("  Schedule: %s AT %s\n", 
-                   task_table[i].schedule_freq, 
+            printf("Schedule: %s AT %s\n",
+                   task_table[i].schedule_freq,
                    task_table[i].schedule_time);
         } else {
-            printf("  Schedule:\n");
+            printf("Schedule:\n");
         }
         
         /* Dependency line */
         if (task_table[i].has_dependency) {
-            printf("  Depends on: %s\n", task_table[i].depends_on);
+            printf("Depends on: %s\n", task_table[i].depends_on);
         }
         
         /* Condition line */
         if (task_table[i].has_condition) {
-            printf("  Condition: %s\n", task_table[i].condition);
+            printf("Condition: %s\n", task_table[i].condition);
         }
         
         printf("\n");
