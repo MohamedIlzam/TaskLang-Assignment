@@ -42,7 +42,7 @@ for f in tests/valid/*.tl; do
     testname=$(basename "$f")
     printf "  %-40s" "$testname"
     
-    output=$($BINARY < "$f" 2>&1)
+    output=$($BINARY "$f" 2>&1)
     exit_code=$?
     
     if [ $exit_code -eq 0 ]; then
@@ -67,7 +67,7 @@ for f in tests/invalid/*.tl; do
     testname=$(basename "$f")
     printf "  %-40s" "$testname"
     
-    output=$($BINARY < "$f" 2>&1)
+    output=$($BINARY "$f" 2>&1)
     exit_code=$?
     
     if [ $exit_code -ne 0 ]; then

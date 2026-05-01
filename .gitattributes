@@ -1,0 +1,17 @@
+# Ensure shell scripts always use Unix line endings (LF)
+*.sh text eol=lf
+
+# C/Flex/Bison source files — Unix endings
+*.l  text eol=lf
+*.y  text eol=lf
+*.h  text eol=lf
+*.c  text eol=lf
+
+# Makefile must use Unix endings
+Makefile text eol=lf
+
+# Test files — Unix endings
+*.tl text eol=lf
+
+# Markdown — allow platform native
+*.md text

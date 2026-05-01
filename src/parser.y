@@ -377,7 +377,8 @@ int main(int argc, char **argv) {
 
     /* Print header before parsing begins */
     printf("Parsing TaskLang++ input...\n\n");
-    
+    fflush(stdout);   /* Flush before errors may appear on stderr */
+
     int result = yyparse();
     
     if (yyin && yyin != stdin) {

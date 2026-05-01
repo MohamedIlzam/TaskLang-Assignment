@@ -41,7 +41,7 @@ int line_num = 1;
   *  SECTION 1: Whitespace & Comments (ignored, but track line numbers)
   * ═══════════════════════════════════════════════════════════════════════ */
 
-[ \t]+          { /* Ignore spaces and tabs */ }
+[ \t\r]+        { /* Ignore spaces, tabs, and carriage returns (Windows CRLF) */ }
 \n              { line_num++; }
 \/\/[^\n]*      { /* Ignore single-line comments */ }
 
